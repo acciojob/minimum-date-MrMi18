@@ -1,5 +1,19 @@
 function minDate(dates) {
-  //write you code here
+//   //write you code here
+ let year = Math.max();
+	let month = Math.max();
+	let day = Math.max();
+	for(let i of dates){
+		let ans  = i.split("/").map(n => Number(n));
+		if(ans[0]<year || year<=ans[0] && month<ans[1] && day<ans[2]){
+			year = ans[0];
+			month = ans[1];
+			day = ans[2];
+        }
+    }
+	return year+"/"+month+"/"+day
+
+	
 }
 
 // Do not change the code
